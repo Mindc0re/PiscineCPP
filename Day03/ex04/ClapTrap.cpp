@@ -19,7 +19,7 @@ _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
 _level(1), _name(name),
 _meleeAtkDmg(30), _rangedAtkDmg(20), _armorDmgReduction(5)
 {
-	std::cout << "A new ClapTrap unit was created ! Its name is " << this->_name << std::endl;	
+	std::cout << "A new ClapTrap unit was created by name ! Its name is " << this->_name << std::endl;	
 
 	return ;
 }
