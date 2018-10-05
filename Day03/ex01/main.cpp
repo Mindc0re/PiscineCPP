@@ -1,52 +1,54 @@
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int 	main(void)
 {
-	FragTrap clap1;
-	FragTrap clap2("Clappy");
+	FragTrap clap1("Clappy");
+	ScavTrap clap2("King ScavTrap");
+	ScavTrap clap3;
 
 	std::cout << std::endl;
 
-	clap1.rangedAttack("Handsome Jack");
-	clap1.rangedAttack("");
+	clap2.rangedAttack("Handsome Jack");
 	clap2.meleeAttack("T.K. Baha");
 
 	std::cout << std::endl;
 
-	clap1.takeDamage(10);
+	clap2.takeDamage(10);
 	clap1.takeDamage(0);
 	clap1.takeDamage(1000);
+	clap2.takeDamage(1000);
 
 	std::cout << std::endl;
 
 	clap1.beRepaired(0);
 	clap1.beRepaired(10);
-	clap1.beRepaired(1000);
+	clap2.beRepaired(1000);
 
 	std::cout << std::endl;
 
 	clap1.takeDamage(20);
 
-	clap2 = clap1;
+	clap3 = clap2;
 
 	std::cout << std::endl;
 
-	clap2.beRepaired(5);
+	clap3.beRepaired(5);
 
-	FragTrap clap3(clap1);
-	clap3.takeDamage(10);
+	ScavTrap clap4(clap3);
+	clap4.takeDamage(10);
 
 	std::cout << std::endl;
 
-	clap1.vaulthunter_dot_exe("Moxxi");
+	clap4.challengeNewcomer();
 	std::cout << std::endl;
-	clap1.vaulthunter_dot_exe("Marcus Kincaid");
+	clap4.challengeNewcomer();
 	std::cout << std::endl;
-	clap1.vaulthunter_dot_exe("Patricia Tannis");
+	clap4.challengeNewcomer();
 	std::cout << std::endl;
-	clap1.vaulthunter_dot_exe("General Knoxx");
+	clap4.challengeNewcomer();
 	std::cout << std::endl;
-	clap1.vaulthunter_dot_exe("Dr. Ned");
+	clap4.challengeNewcomer();
 
 	std::cout << std::endl;	
 }

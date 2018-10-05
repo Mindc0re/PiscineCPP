@@ -6,7 +6,7 @@
 
 FragTrap::FragTrap() :
 _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
-_level(1), _name("ClapTrap P. Claptrappington"),
+_level(1), _name("FragTrap P. Fragtrappington"),
 _meleeAtkDmg(30), _rangedAtkDmg(20), _armorDmgReduction(5)
 {
 	std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
@@ -27,10 +27,10 @@ _meleeAtkDmg(30), _rangedAtkDmg(20), _armorDmgReduction(5)
 }
 
 FragTrap::FragTrap(FragTrap const &inst)
-{
-	std::cout << "I'm a copy of another FragTrap...? This time it'll be awesome, I promise !" << std::endl;	
+{	
 	*this = inst;
-
+	std::cout << "I'm a copy of another FragTrap...? This time it'll be awesome, I promise !" << std::endl;
+	
 	return ;
 }
 
