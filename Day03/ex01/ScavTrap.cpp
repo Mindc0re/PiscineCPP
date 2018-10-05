@@ -16,9 +16,9 @@ _meleeAtkDmg(20), _rangedAtkDmg(15), _armorDmgReduction(3)
 }
 
 ScavTrap::ScavTrap(std::string const &name) :
-_hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
+_hitPoints(100), _maxHitPoints(100), _energyPoints(50), _maxEnergyPoints(50),
 _level(1), _name(name),
-_meleeAtkDmg(30), _rangedAtkDmg(20), _armorDmgReduction(5)
+_meleeAtkDmg(20), _rangedAtkDmg(15), _armorDmgReduction(3)
 {
 	std::cout << "Hey everybody! Check out my package!" << std::endl;
 	std::cout << "My name is " << this->_name << ", and I'm a SC4V-TP model !" << std::endl;

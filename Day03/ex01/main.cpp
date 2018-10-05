@@ -15,6 +15,7 @@ int 	main(void)
 	std::cout << std::endl;
 
 	clap2.takeDamage(10);
+	clap3.takeDamage(10);
 	clap1.takeDamage(0);
 	clap1.takeDamage(1000);
 	clap2.takeDamage(1000);
@@ -24,6 +25,7 @@ int 	main(void)
 	clap1.beRepaired(0);
 	clap1.beRepaired(10);
 	clap2.beRepaired(1000);
+	clap3.beRepaired(1);
 
 	std::cout << std::endl;
 
