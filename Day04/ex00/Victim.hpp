@@ -10,7 +10,7 @@ public:
 
 	Victim(std::string const &name);
 	Victim(Victim const &inst);
-	~Victim();
+	virtual ~Victim();
 
 	Victim &		operator=(Victim const & rightOp);
 

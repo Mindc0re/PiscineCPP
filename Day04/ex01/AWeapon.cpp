@@ -30,7 +30,7 @@ AWeapon::~AWeapon()
 	Operator overloads
 */
 
-AWeapon &		AWeapon::operator=(AWeapon const &rightOp)
+AWeapon &			AWeapon::operator=(AWeapon const &rightOp)
 {
 	this->_name = rightOp._name;
 	this->_apCost = rightOp._apCost;
@@ -44,17 +44,17 @@ AWeapon &		AWeapon::operator=(AWeapon const &rightOp)
 	Member functions
 */
 
-std::string 	AWeapon::getName() const
+std::string const &	AWeapon::getName() const
 {
 	return this->_name;
 }
 
-int 			AWeapon::getAPCost() const
+int 				AWeapon::getAPCost() const
 {
 	return this->_apCost;
 }
 
-int 			AWeapon::getDamage() const
+int 				AWeapon::getDamage() const
 {
 	return this->_damage;
 }

@@ -4,6 +4,11 @@
 	Constructors and destructors
 */
 
+Sorcerer::Sorcerer()
+{
+	std::cout << "hey" << std::endl;
+}
+
 Sorcerer::Sorcerer(std::string const &name, std::string const &title) :
 _name(name), _title(title)
 {

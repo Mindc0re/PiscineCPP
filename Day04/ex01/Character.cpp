@@ -56,7 +56,7 @@ std::ostream &		operator<<(std::ostream &o, Character const &rightOp)
 	Member functions
 */
 
-std::string 		Character::getName() const
+std::string const &	Character::getName() const
 {
 	return this->_name;
 }

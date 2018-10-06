@@ -1,7 +1,7 @@
 #ifndef AWEAPON_HPP
 # define AWEAPON_HPP
 
-#include <iostream>
+# include <iostream>
 
 class AWeapon
 {
@@ -18,13 +18,13 @@ public:
 	AWeapon(AWeapon const &inst);
 	virtual ~AWeapon();
 
-	std::string		getName() const;
-	int 			getAPCost() const;
-	int 			getDamage() const;
+	std::string const &	getName() const;
+	int 				getAPCost() const;
+	int 				getDamage() const;
 
-	virtual void 	attack() const = 0;
+	virtual void 		attack() const = 0;
 
-	AWeapon &		operator=(AWeapon const &rightOp);
+	AWeapon &			operator=(AWeapon const &rightOp);
 
 };
 

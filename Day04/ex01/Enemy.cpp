@@ -30,7 +30,7 @@ Enemy::~Enemy()
 	Operator overloads
 */
 
-Enemy &			Enemy::operator=(Enemy const &rightOp)
+Enemy &				Enemy::operator=(Enemy const &rightOp)
 {
 	this->_hp = rightOp._hp;
 	this->_type = rightOp._type;
@@ -43,17 +43,17 @@ Enemy &			Enemy::operator=(Enemy const &rightOp)
 	Member functions
 */
 
-int 			Enemy::getHP() const
+int 				Enemy::getHP() const
 {
 	return this->_hp;
 }
 
-std::string		Enemy::getType() const
+std::string const &	Enemy::getType() const
 {
 	return this->_type;
 }
 
-void			Enemy::takeDamage(int dmg)
+void				Enemy::takeDamage(int dmg)
 {
 	if (dmg < 0)
 		return ;

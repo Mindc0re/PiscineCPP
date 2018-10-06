@@ -8,7 +8,7 @@
 class Character
 {
 
-protected:
+private:
 	std::string 	_name;
 	int 			_ap;
 	AWeapon *		_curWeapon;
@@ -25,7 +25,7 @@ public:
 	void				equip(AWeapon *weapon);
 	void				attack(Enemy *enemy);
 
-	std::string			getName() const;
+	std::string	const &	getName() const;
 	int 				getAP() const;
 	std::string			getWeapon() const;
 

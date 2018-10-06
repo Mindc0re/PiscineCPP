@@ -11,7 +11,7 @@ public:
 
 	Peon(std::string const &name);
 	Peon(Peon const &inst);
-	~Peon();
+	virtual ~Peon();
 
 	Peon &		operator=(Peon const & rightOp);
 

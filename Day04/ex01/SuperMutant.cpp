@@ -39,8 +39,10 @@ SuperMutant &	SuperMutant::operator=(SuperMutant const &rightOp)
 
 void			SuperMutant::takeDamage(int dmg)
 {
+	dmg -= 3;
+	
 	if (dmg < 0)
 		return ;
 
-	this->_hp -= (dmg - 3);
+	this->_hp -= dmg;
 }
