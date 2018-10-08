@@ -1,4 +1,5 @@
 #include "Player.hpp"
+#include "Enemy.hpp"
 
 /*
 	Constructors and destructors
@@ -28,7 +29,7 @@ Player &			Player::operator=(Player const &rhs)
 {
 	_position = rhs._position;
 	_display = rhs._display;
-	_scrollSpeed = rhs._scrollSpeed;
+	_scrollDelay = rhs._scrollDelay;
 	_onScreen = rhs._onScreen;
 
 	return *this;
@@ -45,18 +46,26 @@ void				Player::appearOnScreen(Context *context)
 	mvwprintw(context->win, _position.y, _position.x, "%c", _display);
 }
 
-void				Player::disappearFromScreen()
+void 				Player::move(Context *context, int x, int y)
 {
-	_onScreen = false;
-}
+	if (_onScreen == false)
+		return ;
 
-void				Player::handleCollision(AGameObject *other)
-{
+	if (_position.y > LINES)
+		_position.y = LINES;
+	if (_position.y + y >= 0 && _position.y + y < LINES)
+		_position.y += y;
+	if (_position.x + y >= 0 && _position.x + x < COLS)
+		_position.x += x;
 
-}
+	for (int i = 0 ; i < (int)Enemy::enemyArr.size() ; i++)
+	{
+		Coordinates coord = Enemy::enemyArr[i]->getCoordinates();
+		if (_position == coord)
+		{
+			_onScreen = false;
+		}	
+	}
 
-void 				Player::move(Context *context, int n)
-{
-	_position.y += n;
 	mvwprintw(context->win, _position.y, _position.x, "%c", _display);
 }

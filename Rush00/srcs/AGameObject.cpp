@@ -9,8 +9,8 @@ AGameObject::AGameObject()
 
 }
 
-AGameObject::AGameObject(int x, int y, char display, int scrollSpeed, bool onScreen, std::string type) :
-_position(Coordinates(x, y)), _display(display), _scrollSpeed(scrollSpeed), _onScreen(onScreen), _type(type)
+AGameObject::AGameObject(int x, int y, char display, int scrollDelay, bool onScreen, std::string type) :
+_position(Coordinates(x, y)), _display(display), _scrollDelay(scrollDelay), _onScreen(onScreen), _type(type)
 {
 
 }
@@ -34,7 +34,7 @@ AGameObject &			AGameObject::operator=(AGameObject const &rhs)
 {
 	_position = rhs._position;
 	_display = rhs._display;
-	_scrollSpeed = rhs._scrollSpeed;
+	_scrollDelay = rhs._scrollDelay;
 	_onScreen = rhs._onScreen;
 
 	return *this;
@@ -50,9 +50,9 @@ Coordinates				AGameObject::getCoordinates() const
 	return _position;
 }
 
-int 					AGameObject::getScrollSpeed() const
+int 					AGameObject::getScrollDelay() const
 {
-	return _scrollSpeed;
+	return _scrollDelay;
 }
 
 bool 					AGameObject::isOnScreen() const

@@ -1,16 +1,16 @@
 NAME        = ft_retro
 
 CPP         = g++
-FLAGS    =	-g #-g a enlever avant rendre -std=c++98 -Wall -Werror -Wextra
+FLAGS    =	 -std=c++98 -Wall -Werror -Wextra
 LNC         = -lncurses
 SRC_DIR     = ./srcs/
 INC_DIR     = ./includes/
 OBJ_DIR     = ./obj/
 
 
-SRCS_FILES = main.cpp Context.cpp AGameObject.cpp Player.cpp Game.cpp Coordinates.cpp
+SRCS_FILES = main.cpp Context.cpp AGameObject.cpp Player.cpp Game.cpp Coordinates.cpp Enemy.cpp Shots.cpp
 
-HPP_FILES = Context.hpp AGameObject.hpp Player.hpp Game.hpp Coordinates.hpp
+HPP_FILES = Context.hpp AGameObject.hpp Player.hpp Game.hpp Coordinates.hpp Enemy.hpp
 
 OBJS_FILES = $(SRCS_FILES:.cpp=.o)
 

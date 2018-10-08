@@ -2,6 +2,7 @@
 
 int main(void) 
 {
+  srand(time(NULL));
 
   Context *context = init();
   
@@ -9,6 +10,8 @@ int main(void)
     endwin();
   else
     return 0;
+  
+  delete(context);
   
   return 0;    
 }

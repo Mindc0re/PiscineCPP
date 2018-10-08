@@ -1,13 +1,10 @@
 #ifndef GAME_HPP
 # define GAME_HPP
 
-# include <unistd.h>
-# include <ncurses.h>
 # include "Context.hpp"
-# include "AGameObject.hpp"
 # include "Player.hpp"
-
-
+# include "Enemy.hpp"
+# include "Shots.hpp"
 
 Context  *init(); 
 int     game(Context *data);

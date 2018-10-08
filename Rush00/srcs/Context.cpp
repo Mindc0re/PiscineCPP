@@ -12,7 +12,7 @@ Context::Context()
 	keypad(stdscr, TRUE);
 	curs_set(0);
 	noecho();
-
+	nodelay(this->win, TRUE);
 	std::cout << "Log : Context was created successfully" << std::endl;
 }
 
