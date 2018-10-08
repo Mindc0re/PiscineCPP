@@ -21,7 +21,7 @@ Form::GradeTooHighException & Form::GradeTooHighException::operator=(Form::Grade
 
 const char *Form::GradeTooHighException::what() const throw()
 {
-	return "The Form grade indicated was too high.";
+	return "The grade indicated was too high.";
 }
 
 
@@ -46,7 +46,31 @@ Form::GradeTooLowException & Form::GradeTooLowException::operator=(Form::GradeTo
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-	return "The Form grade indicated was too low.";
+	return "The grade indicated was too low.";
+}
+
+/*   ***********   */
+/*  FormNotSigned  */
+/*	 ***********   */
+
+Form::FormNotSigned::FormNotSigned() { }
+
+Form::FormNotSigned::FormNotSigned(Form::FormNotSigned const &rhs) 
+{
+	*this = rhs;
+}
+
+Form::FormNotSigned::~FormNotSigned() throw() { }
+
+Form::FormNotSigned & Form::FormNotSigned::operator=(Form::FormNotSigned const &rhs) 
+{
+	(void)rhs;
+	return *this;
+}
+
+const char *Form::FormNotSigned::what() const throw()
+{
+	return "The form is not signed.";
 }
 
 
@@ -58,7 +82,7 @@ const char *Form::GradeTooLowException::what() const throw()
 	Constructors and destructors
 */
 
-Form::Form() : 
+Form::Form() :
 _name("Laisser-passer A38"), _gradeToSign(1), _gradeToExecute(1), _isSigned(false) { }
 
 Form::Form(std::string name, int toSign, int toExecute) : 
@@ -122,6 +146,21 @@ int 				Form::getGradeToExecute() const
 bool				Form::getIsSigned() const
 {
 	return _isSigned;
+}
+
+std::string 		Form::getTarget() const
+{
+	return _target;
+}
+
+void				Form::setTarget(std::string targetToSet)
+{
+	this->_target = targetToSet;
+}
+
+void				Form::setSigned(bool signedToSet)
+{
+	this->_isSigned = signedToSet;
 }
 
 void				Form::beSigned(Bureaucrat guyWhoSigns)

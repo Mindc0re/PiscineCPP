@@ -26,6 +26,9 @@ int main()
 	Form peaceTreaty("Peace Treaty", 1, 1);
 	std::cout << peaceTreaty << std::endl;
 
+	Form warTreaty("War Treaty", 150, 150);
+	std::cout << warTreaty << std::endl;
+
 	gandoulf.signForm(peaceTreaty);
 	std::cout << peaceTreaty << std::endl;
 	
@@ -33,6 +36,12 @@ int main()
 	std::cout << gandoulf << std::endl;
 	gandoulf.signForm(peaceTreaty);
 	std::cout << peaceTreaty << std::endl;
+
+	Form peaceTreaty2(peaceTreaty);
+	std::cout << peaceTreaty << std::endl;
+
+	warTreaty = peaceTreaty2;
+	std::cout << warTreaty << std::endl;
 
 	return 0;
 }

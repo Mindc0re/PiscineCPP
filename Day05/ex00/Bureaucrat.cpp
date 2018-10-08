@@ -70,7 +70,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 		_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &inst)
+Bureaucrat::Bureaucrat(Bureaucrat const &inst) : _name(inst._name)
 {
 	*this = inst;
 }
@@ -85,10 +85,7 @@ Bureaucrat::~Bureaucrat() { }
 */
 
 Bureaucrat &		Bureaucrat::operator=(Bureaucrat const &rhs)
-{
-
-//	this->_name = rhs._name;
-	
+{	
 	this->_grade = rhs._grade;
 
 	return *this;

@@ -17,6 +17,11 @@ int main()
 	gandoulf.incrementGrade();
 	std::cout << gandoulf << std::endl;
 
+	Bureaucrat stanley2(gandoulf);
+	std::cout << "Stanley 2 : " << stanley2 << std::endl;
+
+	stanley2 = stanley;
+	std::cout << "Stanley 2 : " << stanley2 << std::endl;
 	
 	// Exception tooHigh on creation
 	try
