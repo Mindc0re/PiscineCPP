@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <cstring>
 #include <climits>
 #include <iomanip>
 
@@ -101,7 +100,7 @@ int 	main(int ac, char **av)
 	if (std::strlen(av[1]) == 1 && !isDigitChar(av[1][0]) && isPrintableChar(av[1][0]))
 		toConvert = av[1][0];
 	else
-		toConvert = atof(av[1]);
+		toConvert = std::atof(av[1]);
 
 	int precision = getPrecision(av[1]);
 
