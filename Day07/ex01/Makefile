@@ -1,12 +1,12 @@
-NAME        = whatever
+NAME        = iter
 
 CPP         = clang++
 FLAGS    	= -std=c++98 -Wall -Werror -Wextra
-SRC_DIR		= ./
+SRC_DIR 	= ./
 OBJ_DIR     = ./obj/
 
 
-SRCS_FILES = whatever.cpp
+SRCS_FILES = iter.cpp
 
 OBJS_FILES = $(SRCS_FILES:.cpp=.o)
 

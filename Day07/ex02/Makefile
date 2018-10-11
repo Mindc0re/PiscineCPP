@@ -1,12 +1,16 @@
-NAME        = whatever
+NAME        = array
 
 CPP         = clang++
-FLAGS    	= -std=c++98 -Wall -Werror -Wextra
-SRC_DIR		= ./
+FLAGS    =	 -std=c++98 -Wall -Werror -Wextra
+
+SRC_DIR     = ./
+INC_DIR     = ./
 OBJ_DIR     = ./obj/
 
 
-SRCS_FILES = whatever.cpp
+SRCS_FILES = main.cpp
+
+HPP_FILES = Array.tpp
 
 OBJS_FILES = $(SRCS_FILES:.cpp=.o)
 
@@ -19,7 +23,7 @@ obj:
 	@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
-	@$(CPP) $(FLAGS) -o $@ -c $<
+	@$(CPP) $(FLAGS) -I $(INC_DIR) -o $@ -c $< 
 
 $(NAME): $(OBJS)
 	@$(CPP) $(OBJS) -o $@
